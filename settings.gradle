@@ -1,0 +1,2 @@
+rootProject.name='HelApiProjekti'
+include ':app'

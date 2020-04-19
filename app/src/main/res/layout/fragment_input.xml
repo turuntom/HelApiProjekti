@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CA4D4D"
+    android:backgroundTint="#EF7272"
+    tools:context=".InputFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/valittuPaikkaTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_weight="0.5"
+            android:text="Hae paikat ja valitse"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/haePaikkaButton" />
+
+        <Button
+            android:id="@+id/haeTapahtumatButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#CCC6C6"
+            android:text="Hae Tapahtumat"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/paikkaSpinner"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="0.5"
+            android:background="@android:color/background_light"
+            android:foreground="#EB93C4FA"
+            android:popupBackground="@android:color/background_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/haePaikkaButton" />
+
+        <Button
+            android:id="@+id/haePaikkaButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="0.5"
+            android:gravity="bottom|left|end"
+            android:text="Hae paikat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/spinnerLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/paikkaSpinner"
+            android:text="Paikan valinta:"
+            app:layout_constraintBottom_toTopOf="@+id/paikkaSpinner"
+            app:layout_constraintEnd_toEndOf="@+id/paikkaSpinner"
+            app:layout_constraintStart_toStartOf="@+id/paikkaSpinner" />
+
+        <TextView
+            android:id="@+id/labelValittuPaikka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Valittu paikka:"
+            app:layout_constraintBottom_toTopOf="@+id/valittuPaikkaTextView"
+            app:layout_constraintEnd_toEndOf="@+id/valittuPaikkaTextView"
+            app:layout_constraintStart_toStartOf="@+id/valittuPaikkaTextView" />
+
+        <EditText
+            android:id="@+id/haettavaPaikkaEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Malmi"
+            app:layout_constraintBaseline_toBaselineOf="@+id/haePaikkaButton"
+            app:layout_constraintEnd_toStartOf="@+id/haePaikkaButton" />
+
+        <TextView
+            android:id="@+id/labelPaikanHaku"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Haettava paikka:"
+            app:layout_constraintBottom_toTopOf="@+id/haettavaPaikkaEditText"
+            app:layout_constraintEnd_toEndOf="@+id/haettavaPaikkaEditText"
+            app:layout_constraintStart_toStartOf="@+id/haettavaPaikkaEditText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
